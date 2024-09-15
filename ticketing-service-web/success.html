@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apmokėjimas sėkmingas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h1 {
+            color: green;
+        }
+        p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mokėjimas sėkmingai atliktas!</h1>
+    <p>Ačiū už jūsų pirkimą. Jūsų mokėjimas buvo sėkmingas.</p>
+    <br>
+    <a href="index.html" class="button">Grįžti į pradžią</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userEmail = localStorage.getItem('userEmail'); // pasiimti userEmail iš localStorage
+
+            if (userEmail) {
+                fetch('http://localhost:8080/ticketing/send-confirmation-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ userEmail: userEmail })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('El.paštas išsiųstas sėkmingai:', data);
+                })
+                .catch(error => {
+                    console.error('Klaida siunčiant el.paštą:', error);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

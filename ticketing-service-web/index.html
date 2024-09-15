@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renginių puslapis</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/newsletters.css">
+    <link rel="stylesheet" href="./CSS/login.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    
+
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>visirenginiai.LT</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Apie</a></li>
+                    <li><a href="#">Renginiai</a></li>
+                </ul>
+            </nav>
+            <div class="user-login">
+                <a href="login.html">
+                    <i class="fas fa-user"></i> Prisijungti
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <h2>Rekomenduojami renginiai:</h2>
+        <div id="events-container" class="events-container"></div>
+    </div>
+
+    <div id="purchase-popup" class="hidden">
+        <div class="popup-content">
+            <span id="close-popup" class="close-popup">&times;</span>
+            <h2 id="popup-event-name"></h2>
+            <p id="popup-event-time"></p>
+            <p id="popup-event-price"></p>
+            <label for="discount-code">Nuolaidos kodas:</label>
+            <input type="text" id="discount-code" name="discount-code">
+            <button id="recalculate-button">Perskaičiuoti</button>
+            <label for="email">El.paštas:</label>
+            <input type="email" id="email" name="email">
+            <button id="pay-button">Mokėti</button>
+        </div>
+    </div>
+
+    <div id="newsletter-modal" class="hidden modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-modal">&times;</span>
+            <h2>Užsiprenumeruokite naujienlaiškį</h2>
+            <p>Gaukite naujienas tiesiai į savo el. paštą.</p>
+            <input type="email" id="newsletter-email" placeholder="Įveskite el. paštą">
+            <button id="subscribe-button">Prenumeruoti</button>
+            <button id="unsubscribe-button" class="secondary-button">Atsisakyti</button>
+        </div>
+    </div>
+
+    <script src="./JS/script.js"></script>
+    <script src="./JS/newsletters.js"></script>
+</body>
+</html>

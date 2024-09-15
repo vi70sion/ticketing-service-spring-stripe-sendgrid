@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #ddd;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    margin: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    justify-content: space-between;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.event-details {
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.event-name {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.event-description {
+    font-size: 1em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.event-time,
+.event-price {
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+}
+
+.buy-ticket-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.buy-ticket-button:hover {
+    background-color: #1a5327;
+}
+
+/*----------pirkimo popup -----------*/
+/* .hidden {
+    display: none;
+} */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: rgb(221, 221, 221);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.popup-content label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.popup-content input[type="text"],
+.popup-content input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px; /* Add space between input fields */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#recalculate-button,
+#pay-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px; /* Add space above buttons */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#recalculate-button:hover,
+#pay-button:hover {
+    background-color: #218838;
+}
+
+/* User Login */
+.user-login {
+    font-size: 1.2em;
+}
+
+.user-login a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.user-login i {
+    margin-right: 8px;
+}
+
+.user-login a:hover {
+    color: #ddd;
+}
+
+
